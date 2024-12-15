@@ -1,0 +1,294 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+#side-animation {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: none;
+    animation: color 6s;
+}
+
+@keyframes color {
+    0% {
+        opacity: 95%;
+        background-color: rgb(255, 255, 255);
+    }
+
+    50% {
+        opacity: 100%;
+    }
+
+    100% {
+        opacity: 80%;
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+h1 {
+    font-size: 50px;
+}
+
+p {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.btn-moves {
+    font-size: 70px;
+    background-color: black;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+#rock,
+#paper {
+    margin-right: 15px;
+}
+
+.player-score {
+    color: rgb(89, 151, 187);
+}
+
+.comp-score {
+    color: rgb(212, 35, 35);
+}
+
+#result {
+    color: rgb(16, 7, 150);
+    font-size: 22px;
+}
+
+#rock {
+    background-color: rgb(235, 16, 16);
+    border: none;
+    transition-duration: 200ms;
+}
+
+#rock:active {
+    transform: scale(1.2);
+}
+
+#paper {
+    background-color: rgb(16, 155, 235);
+    border: none;
+}
+
+#paper:active {
+    animation: shake 100ms;
+}
+
+@keyframes shake {
+    0% {
+        transform: rotate(15deg);
+    }
+
+    50% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(-15deg);
+    }
+}
+
+#scissor:active {
+    transform: translateY(-25px);
+}
+
+#scissor {
+    background-color: rgb(50, 175, 81);
+    border: none;
+}
+
+.frame {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    display: none;
+}
+
+.img {
+    width: 100%;
+    height: 100%;
+}
+
+.left_part {
+    left: 10%;
+}
+
+.right_part {
+    right: 10%;
+}
+
+#paper-frame-left {
+    rotate: 60deg;
+}
+
+#rock-left {
+    rotate: 90deg;
+}
+
+#scissor-frame-left,
+#rock-left,
+#paper-frame-left {
+    animation: show-animation 5s;
+}
+
+#paper-frame-right {
+    rotate: 300deg;
+}
+
+#rock-right,
+#scissor-frame-right,
+#paper-frame-right {
+    animation: show-animation-right 5s;
+}
+
+#rock-frame-left {
+    rotate: 90deg;
+    animation: rock-left 3s;
+}
+
+#rock-frame-right {
+    animation: rock 3s;
+}
+
+@keyframes rock-left {
+    0% {
+        opacity: 0;
+        transform: rotate(25deg);
+    }
+
+    50% {
+        opacity: 0.5;
+        transform: rotate(-25deg);
+    } 
+    100% {
+        opacity: 1;
+        transform: rotate(0);
+    }
+}
+
+@keyframes rock {
+    0% {
+        opacity: 0;
+        transform: rotate(-25deg);
+    }
+
+     50% {
+        opacity: 0.5;
+        transform: rotate(25deg);
+    } 
+
+    100% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes show-animation {
+    0% {
+        opacity: 0;
+        /* transform: rotate(-25deg); */
+    }
+
+    50% {
+        opacity: 1;
+        /* transform: rotate(25deg); */
+    }
+
+    100% {
+        opacity: 0;
+        /* transform: rotate(0deg); */
+    }
+}
+
+@keyframes show-animation-right {
+    0% {
+        opacity: 0;
+        /* transform: rotate(25deg); */
+    }
+
+    50% {
+        opacity: 1;
+        /* transform: rotate(-25deg); */
+    }
+
+    100% {
+        opacity: 0;
+        /* transform: rotate(0deg); */
+    }
+}
+
+
+
+@media (max-width: 1199px) {
+    .frame{
+        width: 200px;
+        height: 200px;
+        top: 30%;
+    }
+}
+
+@media (max-width: 767px) {
+    h1 {
+        font-size: 35px;
+    }
+
+    #result {
+        font-size: 20px;
+    }
+
+    .btn-moves {
+        font-size: 55px;
+    }
+
+    .frame{
+        width: 200px;
+        height: 200px;
+        top: 30%;
+    }
+
+    .left_part{
+        left: 10%;
+    }
+
+    .right_part{
+        right: 10%;
+    }
+}
+
+@media (max-width:599px) {
+    .frame{
+        width: 125px;
+        height: 125px;
+        top: 35%;
+    }
+
+    .left_part{
+        left: 10%;
+    }
+
+    .right_part{
+        right: 10%;
+    }
+}

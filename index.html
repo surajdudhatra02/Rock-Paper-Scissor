@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+
+        <div class="side-ani" id="side-animation">
+
+            <div class="frame left_part" id="rock-frame-left">
+                <img src="./images/rock.png" alt="" class="img">
+            </div>
+            <div class="frame right_part" id="rock-frame-right">
+                <img src="./images/rock_right.png" alt="" class="img">
+            </div>
+
+
+            <div class="frame left_part" id="paper-frame-left">
+                <img src="./images/paper_left.png" alt="" class="img">
+            </div>
+            <div class="frame right_part" id="paper-frame-right">
+                <img src="./images/paper.png" alt="" class="img">
+            </div>
+
+            <div class="frame left_part" id="rock-left">
+                <img src="./images/rock.png" alt="" class="img">
+            </div>
+            <div class="frame right_part" id="rock-right">
+                <img src="./images/rock_right.png" alt="" class="img">
+            </div>
+
+            <div class="frame left_part" id="scissor-frame-left">
+                <img src="./images/scissor_left.png" alt="" class="img">
+            </div>
+            <div class="frame right_part" id="scissor-frame-right">
+                <img src="./images/scissor.png" alt="" class="img">
+            </div>
+
+        </div>
+
+        <div class="game">
+            <h1>Rock Paper Scissors</h1>
+
+            <p>Choose your move:</p>
+
+            <div class="moves">
+                <button class="btn-moves " id="rock"> 👊 </button>
+                <button class="btn-moves " id="paper"> 🖐 </button>
+                <button class="btn-moves " id="scissor"> ✌ </button>
+            </div>
+
+            <h3 id="result"></h3>
+
+            <h3> Your score: <span class="player-score"> 0 </span> </h3>
+            <h3> Computer score: <span class="comp-score"> 0 </span> </h3>
+        </div>
+    </div>
+
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
